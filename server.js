@@ -33,7 +33,7 @@ app.use(
                 const cookies = req.headers.cookie;
 
                 if (cookies) {
-                    console.log("🍪 Intercepted Cookies:", cookies);
+                    console.log("Intercepted Cookies:", cookies);
                 } else {
                     console.log("No cookies");
                 }

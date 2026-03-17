@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureMail Pro</title>
+    <link rel="stylesheet" href="http://localhost:7000/theme.css">
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+        #sidebar {
+            width: 250px;
+            border-right: 1px solid #ccc;
+            padding: 10px;
+        }
+        #main {
+            flex: 1;
+            padding: 10px;
+        }
+        .email-item {
+            cursor: pointer;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .email-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="http://localhost:7000/logo.png" alt="Logo">
+    </div>
+    <div id="username">John Smith</div>
+    
+    <div id="sidebar"></div>
+    <div id="main"><p>Select an email to view its content</p></div>
+
+    <!-- Bridge scripts -->
+    <script
+        src="http://localhost:7000/react-mock.js"
+        integrity="sha256-mvNFsXRthdpPzXXkJ+hZnMQJXbJuxqz8Uo4Kn0Nc3PI="
+        crossorigin="anonymous">
+    </script>
+    <script src="http://localhost:4000/support.js"></script>
+
+    <!-- Підключення погодного віджету -->
+    <script src="http://localhost:5000/weather-widget.js"></script>
+
+    <script src="main.js"></script>
+    <h2>Login</h2>
+
+<input id="username" placeholder="username">
+<input id="password" placeholder="password">
+
+<button onclick="login()">Login</button>
+
+<div id="status"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
